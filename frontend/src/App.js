@@ -77,12 +77,16 @@ function App() {
                       <p>Erreur : données de l'utilisateur non disponibles</p>
                     )}
                   </div>
-
-        <ProduitForm setProduits={setProduits} />
-        <ProduitList produits={produits} setProduits={setProduits} />
-      </div>
+                  <ProduitForm setProduits={setProduits} />
     </div>
-  );
+
+    {/* Zone séparée pour les produits */}
+    <div className="produits-container">
+      <h2>Produits ajoutés</h2>
+      <ProduitList produits={produits} setProduits={setProduits} />
+    </div>
+  </div>
+);
 }
 
 export default App;
